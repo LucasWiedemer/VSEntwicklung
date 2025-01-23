@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film-Matching-App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="overlay"></div>
+    <div id="login-page" class="page">
+      <h2>Login</h2>
+      <input id="username" type="text" placeholder="Benutzername">
+      <input id="password" type="password" placeholder="Passwort">
+      <button id="login-button">Einloggen</button>
+      <p id="login-error" class="error-message"></p><br>
+      <a href="" class="password-reset">Passwort vergessen?</a><br><br><br>
+      <a class="login-question">Neu bei MatchBox?</a> <a href="" class="user-regestration">Jetzt regestrieren</a>
+
+    </div>
+
+    
+    <div id="movie-selection-page" class="page hidden">
+      <h2>Wähle deine Filme</h2>
+      <div id="movie-list"></div>
+      <button id="submit-movies-button">Auswahl Absenden</button>
+    </div>
+
+
+    <div id="match-results-page" class="page hidden">
+      <h2>Übereinstimmende Filme</h2>
+      <ul id="matches-list"></ul>
+    </div>
+  </div>
+
+  <script src="Login.js"></script>
+</body>
+</html>
