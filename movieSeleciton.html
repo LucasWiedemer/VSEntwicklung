@@ -1,31 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Filmauswahl</title>
-  <link rel="stylesheet" href="movieSelection.css">
+  <link rel="stylesheet" href="movieSelection.css" />
 </head>
 <body>
-    <div id="app">
-        <div class="overlay"></div>
-      <header>
-        <h1>Film-Slider</h1>
-      </header>
-      
-      <main>
-        <div id="slider-container">
-          <div id="movie-slider">
-            <!-- Dynamisch hinzugefügte Filmkarten -->
-          </div>
+  <div id="app">
+    <div class="overlay"></div>
+    <header>
+      <h1>Film-Slider</h1>
+    </header>
+
+    <!-- FILTER-FORMULAR -->
+    <form id="filter-form">
+      <label for="category-select">Kategorie:</label>
+      <select id="category-select">
+        <option value="">Alle</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Comedy">Comedy</option>
+      </select>
+
+      <label for="length-select">Länge:</label>
+      <select id="length-select">
+        <option value="">Alle</option>
+        <option value="short">Bis 120 min</option>
+        <option value="medium">120 bis 150 min</option>
+        <option value="long">Über 150 min</option>
+      </select>
+
+      <button type="submit">Filtern</button>
+    </form>
+    <!-- ENDE FILTER-FORMULAR -->
+
+    <main>
+      <div id="slider-container">
+        <div id="movie-slider">
+          <!-- Dynamisch hinzugefügte Filmkarten -->
         </div>
-        <div id="controls">
-          <button id="reject-button">Pass</button>
-          <button id="accept-button">Match</button>
-        </div>
-      </main>
-    </div>
-  
-    <script src="movieSelection.js"></script>
-  </body>
+      </div>
+      <div id="controls">
+        <button id="reject-button">Pass</button>
+        <button id="accept-button">Match</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="movieSelection.js"></script>
+</body>
 </html>
+

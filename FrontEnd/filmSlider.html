@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Film-Matching-App mit Filter</title>
+  <link rel="stylesheet" href="filmSlider.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="overlay"></div>
+    <div class="overlay"></div>
+    <!-- LOGIN-SEITE -->
+    <div id="login-page" class="page">
+      <h2>Login</h2>
+      <input id="login-username" type="text" placeholder="Benutzername" />
+      <input id="login-password" type="password" placeholder="Passwort" />
+      <button id="login-button">Einloggen</button>
+      <p id="login-error" class="error-message"></p>
+
+      <p class="switch-link">
+        Neu bei MatchBox?
+        <a href="#" id="go-to-register">Jetzt registrieren</a>
+      </p>
+    </div>
+    <!-- ENDE LOGIN-SEITE -->
+
+    <!-- REGISTRIEREN-SEITE -->
+    <div id="register-page" class="page hidden">
+      <h2>Registrieren</h2>
+      <input id="register-username" type="text" placeholder="Benutzername" />
+      <input id="register-email" type="email" placeholder="E-Mail" />
+      <input id="register-password" type="password" placeholder="Passwort" />
+      <button id="register-button">Registrieren</button>
+      <button id="back-to-login">Zum Login</button>
+
+      <p id="register-error" class="error-message"></p>
+      <p id="register-success" class="success-message"></p>
+    </div>
+    <!-- ENDE REGISTRIEREN-SEITE -->
+
+    <!-- FILM-AUSWAHL-SEITE (mit Filter + Slider) -->
+    <div id="movie-selection-page" class="page hidden">
+      <h2>Wähle deine Filme</h2>
+
+      <!-- FILTER-FORMULAR -->
+      <form id="filter-form" class="filter-form">
+        <label for="category-select">Kategorie:</label>
+        <select id="category-select">
+          <option value="">Alle</option>
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Romance">Romance</option>
+        </select>
+
+        <label for="length-select">Länge:</label>
+        <select id="length-select">
+          <option value="">Alle</option>
+          <option value="short">Bis 120 min</option>
+          <option value="medium">120 bis 150 min</option>
+          <option value="long">Über 150 min</option>
+        </select>
+
+        <button type="submit">Filtern</button>
+      </form>
+      <!-- ENDE FILTER-FORMULAR -->
+
+      <!-- SLIDER -->
+      <div id="slider-container">
+        <div id="movie-slider">
+          <!-- Dynamische Filmkarten werden hier eingefügt -->
+        </div>
+      </div>
+      <div id="controls">
+        <button id="reject-button">Pass</button>
+        <button id="accept-button">Match</button>
+      </div>
+
+      <button id="submit-movies-button" class="primary-btn">Auswahl absenden</button>
+    </div>
+    <!-- ENDE FILM-AUSWAHL-SEITE -->
+
+    <!-- MATCHERGEBNIS-SEITE -->
+    <div id="match-results-page" class="page hidden">
+      <h2>Gemeinsame Filme</h2>
+      <p id="match-info"></p>
+      <ul id="match-list"></ul>
+      <button id="go-back-button" class="primary-btn">Weitere Filme auswählen</button>
+    </div>
+    <!-- ENDE MATCHERGEBNIS-SEITE -->
+  </div><!-- Ende #app -->
+
+  <script src="filmSlider.js"></script>
+</body>
+</html>

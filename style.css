@@ -84,3 +84,23 @@ body {
     text-align: center;
   }
   
+  .page {
+    /* Deine bisherigen allgemeinen Styles für Seiten */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Fehler- und Erfolgsmeldungen */
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .success-message {
+    color: green;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
